@@ -1,0 +1,66 @@
+$color-success-light: #8ec33b;
+$color-success: #458917;
+
+$color-error-light: #d53270;
+$color-error: #b6142b;
+
+.flash-card {
+  min-width: 300px;
+  max-width: 348px;
+  padding: 25px 25px 7px 25px;
+  box-shadow: 0 2px 18px 2px #00000030;
+  font-family: sans-serif;
+  margin-left: auto;
+  margin-top: 20px;
+  // position: absolute;
+  // right: 20px;
+  // top: 20px;
+  border-top: 10px solid;
+
+  .flash-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .flash-message {
+    font-size: 16px;
+    color: #383636;
+  }
+}
+
+.flash-success {
+  border-color: $color-success;
+  .flash-title {
+    color: $color-success;
+  }
+}
+
+.flash-error {
+  border-color: $color-error;
+  .flash-title {
+    color: $color-error;
+  }
+}
+
+.close {
+  position: relative;
+  right: -97%;
+  top: -60px;
+  cursor: pointer;
+}
+
+.show-flash {
+  animation-name: showFlash;
+  animation-duration: 0.8s;
+}
+
+@keyframes showFlash {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
